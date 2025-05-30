@@ -23,57 +23,156 @@ const sampleHospitals: Hospital[] = [
     address: "Jl. Mayjen Prof. Dr. Moestopo No.6-8, Airlangga, Kec. Gubeng, Kota Surabaya",
     phone: "(031) 5501078",
     operatingHours: "24 Jam",
-    services: ["UGD 24 Jam", "Poli Umum", "Rawat Inap", "ICU", "Radiologi", "Laboratorium"],
+    services: ["UGD 24 Jam",
+        "Rawat Inap",
+        "Rawat Jalan",
+        "Poliklinik Spesialis (22 spesialisasi termasuk Anestesiologi, Bedah Plastik, Kardiologi, Onkologi, Geriatri, Pediatri, Ortopedi)",
+        "Medical Check-Up",
+        "Diagnostik Lanjutan (MRI, CT Scan, Fluoroscopy, Panoramic, Ultrasound, Radiologi Intervensi)",
+        "Radioterapi",
+        "Pelatihan Penanganan Kegawatdaruratan Maternal dan Neonatal",
+        "Pencegahan dan Pengendalian Infeksi",
+        "Konseling Kesehatan Reproduksi",
+        "Layanan Transplantasi (ginjal, kornea)"],
     rating: 4.5,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RSUD+Dr.+Soetomo"
+    image: "image/soeto.png"
   },
   {
     id: 2,
-    name: "RS Siloam Surabaya",
-    address: "Jl. Raya Gubeng No.70, Gubeng, Kec. Gubeng, Kota Surabaya",
-    phone: "(031) 5031333",
+    name: "Rumah Sakit Universitas Airlangga",
+    address: "Jl. Mayjen Prof. Dr. Moestopo No. 47, Surabaya",
+    phone: "+62 31 5501488",
     operatingHours: "24 Jam",
-    services: ["UGD 24 Jam", "Poli Spesialis", "Radiologi", "Farmasi", "Laboratorium", "Medical Check-Up"],
+    services: ["UGD 24 Jam",
+        "Rawat Inap",
+        "Rawat Jalan",
+        "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+        "Medical Check-Up",
+        "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+        "Rehabilitasi Medik",
+        "Layanan Bedah (termasuk bedah mata dan onkologi)",
+        "Farmasi 24 Jam",
+        "Klinik Jantungan"],
     rating: 4.3,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Siloam"
+    image: "image/una.jpg"
   },
   {
     id: 3,
-    name: "RS Premier Surabaya",
-    address: "Jl. Nginden Intan Barat No.2, Nginden Jangkungan, Kec. Sukolilo, Kota Surabaya",
-    phone: "(031) 5993211",
+    name: "Rumah Sakit Islam Surabaya",
+    address: "Jl. Achmad Yani No. 2-4, Wonokromo, Surabaya",
+    phone: "+62 31 8291920",
     operatingHours: "24 Jam",
-    services: ["Poli Umum", "Poli Anak", "Poli Gigi", "Laboratorium", "Radiologi", "Farmasi"],
+    services: ["UGD 24 Jam",
+        "Rawat Inap",
+        "Rawat Jalan (Reguler BPJS dan Eksekutif Non-BPJS)",
+        "Poliklinik Spesialis (Kardiologi, Neurologi, Urologi, Anak, Penyakit Dalam, Mata, Ortopedi)",
+        "Hemodialisis (30 mesin, single-use dialiser)",
+        "Diagnostik Lanjutan (CT Scan, USG, Rontgen, Laboratorium)",
+        "Layanan Bedah (4 kamar operasi, termasuk ortopedi dengan C-arm dan mata dengan phakoemulsifikasi)",
+        "Klinik Fertilitas",
+        "Rehabilitasi Medik (Terapi Okupasi, Terapi Wicara, Tumbuh Kembang Anak)",
+        "Poli Laktasi (konsultasi ASI)",
+        "Pemulasaran Jenazah",
+        "Farmasi 24 Jam"],
     rating: 4.7,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Premier"
+    image: "image/RSI.jpg"
   },
   {
     id: 4,
-    name: "RSUD Bhakti Dharma Husada",
-    address: "Jl. Kendung No.115-117, Sememi, Kec. Benowo, Kota Surabaya",
-    phone: "(031) 99245100",
+    name: "Rumah Sakit Angkatan Laut Dr. Ramelan (RSAL)",
+    address: "Jl. Gadung No. 1, Surabaya",
+    phone: "+62 31 8439570",
     operatingHours: "24 Jam",
-    services: ["UGD 24 Jam", "Poli Umum", "Poli Anak", "Poli Gigi", "Laboratorium"],
+    services: ["UGD 24 Jam",
+        "Rawat Inap",
+        "Rawat Jalan",
+        "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata, Ortopedi)",
+        "Diagnostik (Rontgen, USG, Laboratorium)",
+        "Layanan Bedah Umum",
+        "Rehabilitasi Medik",
+        "Layanan Kedokteran Hiperbarik"],
     rating: 4.2,
     image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RSUD+BDH"
   },
   {
     id: 5,
-    name: "RS Adi Husada Kapasari",
-    address: "Jl. Kapasari No.97-101, Kapasan, Kec. Simokerto, Kota Surabaya",
-    phone: "(031) 3764555",
+    name: "Rumah Sakit Wiyung Sejahtera",
+    address: "Jl. Raya Menganti Wiyung No. 27, Surabaya",
+    phone: "+62 31 7532777",
     operatingHours: "24 Jam",
-    services: ["UGD 24 Jam", "Poli Umum", "Rawat Inap", "Laboratorium", "Radiologi"],
+    services: [ "UGD 24 Jam",
+        "Rawat Inap",
+        "Rawat Jalan",
+        "Poliklinik Spesialis (Anak, Penyakit Dalam, Bedah, THT, Mata)",
+        "Diagnostik (Rontgen, USG, Laboratorium)",
+        "Layanan Bedah Umum"],
     rating: 4.0,
     image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Adi+Husada"
   },
   {
     id: 6,
-    name: "RS Mitra Keluarga Kenjeran",
-    address: "Jl. Kenjeran No.506, Kalijudan, Kec. Mulyorejo, Kota Surabaya",
-    phone: "(031) 99000880",
+    name: "Rumah Sakit Muji Rahayu",
+    address: "Jl. Raya Manukan Kulon No. 66, Surabaya",
+    phone: "+62 31 7417171",
     operatingHours: "24 Jam",
-    services: ["UGD 24 Jam", "Poli Spesialis", "Radiologi", "Laboratorium", "Farmasi"],
+    services: ["UGD 24 Jam",
+        "Rawat Inap",
+        "Rawat Jalan",
+        "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata)",
+        "Diagnostik (USG, Rontgen, Laboratorium)",
+        "Layanan Bedah Umum"],
+    rating: 4.6,
+    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+  },
+  {
+    id: 7,
+    name: "RSUD Husada Prima",
+    address: "Jl. Karang Tembok No. 39, Surabaya",
+    phone: "031-3713839",
+    operatingHours: "24 Jam",
+    services: ["UGD 24 Jam",
+        "Rawat Inap",
+      "Rawat Jalan",
+      "IGD",
+      "Poliklinik Spesialis (Bedah, Anak, Penyakit Dalam, dll.)",
+      "Laboratorium",
+      "Radiologi",
+      "Bedah Laparoskopi",
+      "Radiologi"],
+    rating: 4.6,
+    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+  },
+  {
+    id: 8,
+    name: "RS PKU Muhammadiyah Surabaya",
+    address: "Jl. Raya Sutorejo No. 64, Dukuh Sutorejo, Kec. Mulyorejo, Surabaya",
+    phone: "031-5939933",
+    operatingHours: "24 Jam",
+    services: ["UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "IGD 24 Jam",
+      "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata, dll.)",
+      "Laboratorium",
+      "Radiologi",
+      "Hemodialisis",
+      "MCU",
+      "Fisioterapi"],
+    rating: 4.6,
+    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+  },
+  {
+    id: 9,
+    name: "Rumah Sakit Surabaya Medical Service",
+    address: "Jl. Kapuas No.2, Keputran, Kec. Tegalsari, Surabaya",
+    phone: "031-5686161",
+    operatingHours: "24 Jam",
+    services: ["Rawat Inap",
+      "Rawat Jalan",
+      "UGD 24 Jam",
+      "Poliklinik Spesialis",
+      "Laboratorium",
+      "Radiologi"],
     rating: 4.6,
     image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
   }
@@ -84,49 +183,7 @@ export default function HospitalsPage() {
     <MainLayout>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Daftar Rumah Sakit Surabaya</h1>
-        
-        <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="col-span-1">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Cari Rumah Sakit
-              </label>
-              <input 
-                type="text" 
-                placeholder="Nama rumah sakit..." 
-                className="input-field py-2"
-              />
-            </div>
-            
-            <div className="col-span-1">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Filter Layanan
-              </label>
-              <select className="input-field py-2">
-                <option>Semua Layanan</option>
-                <option>UGD 24 Jam</option>
-                <option>Poli Umum</option>
-                <option>Poli Anak</option>
-                <option>Poli Gigi</option>
-                <option>Laboratorium</option>
-                <option>Radiologi</option>
-                <option>ICU</option>
-              </select>
-            </div>
-            
-            <div className="col-span-1">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Urutkan Berdasarkan
-              </label>
-              <select className="input-field py-2">
-                <option>Nama (A-Z)</option>
-                <option>Rating Tertinggi</option>
-                <option>Jarak Terdekat</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sampleHospitals.map((hospital) => (
             <div key={hospital.id} className="card hover:shadow-lg transition-shadow">
@@ -183,26 +240,6 @@ export default function HospitalsPage() {
               </Link>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-8 flex justify-center">
-          <div className="flex items-center space-x-1">
-            <button className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-              Sebelumnya
-            </button>
-            <button className="px-4 py-2 border border-primary bg-primary text-white rounded-md text-sm font-medium">
-              1
-            </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-              2
-            </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-              3
-            </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-              Selanjutnya
-            </button>
-          </div>
         </div>
       </div>
     </MainLayout>

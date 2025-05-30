@@ -9,7 +9,7 @@ export default function AboutPage() {
     <MainLayout>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Tentang Web GIS Rumah Sakit Surabaya</h1>
-        
+
         <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
           <div className="md:flex">
             <div className="md:w-1/2 p-6 md:p-8">
@@ -25,19 +25,20 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="md:w-1/2 bg-primary-light flex items-center justify-center p-8">
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <Image 
-                  src="https://placehold.co/600x400/3B82F6/FFFFFF/png?text=Web+GIS+Rumah+Sakit" 
-                  alt="Web GIS Rumah Sakit Surabaya" 
-                  width={600}
-                  height={400}
-                  className="w-full h-auto"
+              <div className="rounded-xl overflow-hidden">
+                <Image
+                  src="/image/bg.png"
+                  alt="Web GIS Rumah Sakit Surabaya"
+                  width={800}
+                  height={800}
+                  className="w-full h-auto border-none"
                 />
               </div>
             </div>
+
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div className="card">
             <div className="flex items-center mb-4">
@@ -53,7 +54,7 @@ export default function AboutPage() {
               Temukan rumah sakit terdekat berdasarkan lokasi Anda saat ini. Aplikasi akan menampilkan daftar rumah sakit beserta jarak dan estimasi waktu tempuh.
             </p>
           </div>
-          
+
           <div className="card">
             <div className="flex items-center mb-4">
               <div className="bg-primary-light p-3 rounded-full mr-4">
@@ -67,7 +68,7 @@ export default function AboutPage() {
               Filter rumah sakit berdasarkan layanan yang Anda butuhkan, seperti UGD 24 jam, poli spesialis, laboratorium, dan layanan lainnya.
             </p>
           </div>
-          
+
           <div className="card">
             <div className="flex items-center mb-4">
               <div className="bg-primary-light p-3 rounded-full mr-4">
@@ -82,10 +83,10 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Cara Menggunakan Aplikasi</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <div className="flex items-start mb-4">
@@ -99,7 +100,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start mb-4">
                 <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
                   2
@@ -111,7 +112,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
                   3
@@ -124,7 +125,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-start mb-4">
                 <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
@@ -137,7 +138,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start mb-4">
                 <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
                   5
@@ -149,7 +150,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
                   6
@@ -164,7 +165,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        
+
         <div className="bg-primary text-white rounded-xl shadow-sm p-6 mb-8">
           <div className="md:flex items-center">
             <div className="md:w-2/3 mb-4 md:mb-0">
@@ -180,50 +181,50 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        
+
         <div className="text-center">
           <h2 className="text-2xl font-semibold mb-6">Tim Pengembang</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="card text-center">
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-                <Image 
-                  src="https://placehold.co/200x200/3B82F6/FFFFFF/png?text=Developer" 
-                  alt="Developer" 
+                <Image
+                  src="/image/dn.jpg"
+                  alt="Developer"
                   width={200}
                   height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-lg font-medium">Ahmad Fauzi</h3>
-              <p className="text-text-secondary text-sm">Lead Developer</p>
+              <h3 className="text-lg font-medium">Muchammad Ramadani </h3>
+              <p className="text-text-secondary text-sm">Front-end Developer</p>
             </div>
-            
+
             <div className="card text-center">
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-                <Image 
-                  src="https://placehold.co/200x200/3B82F6/FFFFFF/png?text=Designer" 
-                  alt="Designer" 
+                <Image
+                  src="/image/wl.jpg"
+                  alt="Designer"
                   width={200}
                   height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-lg font-medium">Budi Santoso</h3>
-              <p className="text-text-secondary text-sm">UI/UX Designer</p>
+              <h3 className="text-lg font-medium">Wildan Habibi R</h3>
+              <p className="text-text-secondary text-sm">Back-end Developer</p>
             </div>
-            
+
             <div className="card text-center">
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-                <Image 
-                  src="https://placehold.co/200x200/3B82F6/FFFFFF/png?text=Data" 
-                  alt="Data Analyst" 
+                <Image
+                  src="/image/dea.jpg"
+                  alt="Data Analyst"
                   width={200}
                   height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-lg font-medium">Citra Dewi</h3>
+              <h3 className="text-lg font-medium">Dea Ayu Novita Putri </h3>
               <p className="text-text-secondary text-sm">GIS Specialist</p>
             </div>
           </div>

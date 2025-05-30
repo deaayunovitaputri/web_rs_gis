@@ -246,7 +246,8 @@ export default function HospitalDetailPage() {
                           latitude: hospital.latitude,
                           longitude: hospital.longitude,
                           services: hospital.services,
-                          rating: hospital.rating
+                          rating: hospital.rating,
+                          doctors: []
                         }]}
                         showUserLocation={true}
                       />
