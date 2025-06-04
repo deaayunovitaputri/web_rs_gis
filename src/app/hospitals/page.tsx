@@ -75,7 +75,7 @@ const sampleHospitals: Hospital[] = [
         "Pemulasaran Jenazah",
         "Farmasi 24 Jam"],
     rating: 4.7,
-    image: "image/RSI.jpg"
+    image: "image/rsi.png"
   },
   {
     id: 4,
@@ -92,7 +92,7 @@ const sampleHospitals: Hospital[] = [
         "Rehabilitasi Medik",
         "Layanan Kedokteran Hiperbarik"],
     rating: 4.2,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RSUD+BDH"
+    image: "/image/rsal.png"
   },
   {
     id: 5,
@@ -107,7 +107,7 @@ const sampleHospitals: Hospital[] = [
         "Diagnostik (Rontgen, USG, Laboratorium)",
         "Layanan Bedah Umum"],
     rating: 4.0,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Adi+Husada"
+    image: "/image/rsadi.png"
   },
   {
     id: 6,
@@ -122,7 +122,7 @@ const sampleHospitals: Hospital[] = [
         "Diagnostik (USG, Rontgen, Laboratorium)",
         "Layanan Bedah Umum"],
     rating: 4.6,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+    image: "/image/muji.png"
   },
   {
     id: 7,
@@ -140,7 +140,7 @@ const sampleHospitals: Hospital[] = [
       "Bedah Laparoskopi",
       "Radiologi"],
     rating: 4.6,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+    image: "/image/husada.jpg"
   },
   {
     id: 8,
@@ -159,7 +159,7 @@ const sampleHospitals: Hospital[] = [
       "MCU",
       "Fisioterapi"],
     rating: 4.6,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+    image: "/image/pku.png"
   },
   {
     id: 9,
@@ -174,7 +174,7 @@ const sampleHospitals: Hospital[] = [
       "Laboratorium",
       "Radiologi"],
     rating: 4.6,
-    image: "https://placehold.co/600x400/3B82F6/FFFFFF/png?text=RS+Mitra+Keluarga"
+    image: "/image/mdical.jpg"
   }
 ];
 

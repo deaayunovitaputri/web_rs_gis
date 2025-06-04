@@ -40,9 +40,6 @@ export default function Header() {
           <Link href="/about" className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary hover:border-b-2 hover:border-primary transition-colors">
             Tentang Kami
           </Link>
-          <Link href="/admin/login" className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary hover:border-b-2 hover:border-primary transition-colors">
-             Login
-          </Link>
         </div>
       </div>
     </nav>

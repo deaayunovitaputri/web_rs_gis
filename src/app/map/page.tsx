@@ -120,19 +120,6 @@ export default function MapPage() {
 
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Cari Rumah Sakit
-                </label>
-                <input
-                  type="text"
-                  placeholder="Nama rumah sakit..."
-                  className="input-field py-2 w-full border px-2"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Layanan
                 </label>
                 <div className="space-y-2">

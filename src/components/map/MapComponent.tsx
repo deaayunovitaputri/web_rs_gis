@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import Link from "next/link";
 import { hospitalIcon, userLocationIcon } from './CustomMarker';
 
 // Define hospital interface
@@ -28,16 +29,16 @@ const sampleHospitals: Hospital[] = [
     latitude: -7.2641,
     longitude: 112.7590,
     services: ["Unit Gawat Darurat (UGD) 24/7",
-        "Rawat Inap",
-        "Rawat Jalan",
-        "Poliklinik Spesialis (22 spesialisasi termasuk Anestesiologi, Bedah Plastik, Kardiologi, Onkologi, Geriatri, Pediatri, Ortopedi)",
-        "Medical Check-Up",
-        "Diagnostik Lanjutan (MRI, CT Scan, Fluoroscopy, Panoramic, Ultrasound, Radiologi Intervensi)",
-        "Radioterapi",
-        "Pelatihan Penanganan Kegawatdaruratan Maternal dan Neonatal",
-        "Pencegahan dan Pengendalian Infeksi",
-        "Konseling Kesehatan Reproduksi",
-        "Layanan Transplantasi (ginjal, kornea)"],
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (22 spesialisasi termasuk Anestesiologi, Bedah Plastik, Kardiologi, Onkologi, Geriatri, Pediatri, Ortopedi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (MRI, CT Scan, Fluoroscopy, Panoramic, Ultrasound, Radiologi Intervensi)",
+      "Radioterapi",
+      "Pelatihan Penanganan Kegawatdaruratan Maternal dan Neonatal",
+      "Pencegahan dan Pengendalian Infeksi",
+      "Konseling Kesehatan Reproduksi",
+      "Layanan Transplantasi (ginjal, kornea)"],
     rating: 4.5,
     doctors: ["Dr. Andi Setiawan", "Dr. Budi Hartono", "Dr. Clara Wijaya"] // <- Tambahan
   },
@@ -48,15 +49,15 @@ const sampleHospitals: Hospital[] = [
     latitude: -7.267892,
     longitude: 112.758124,
     services: ["UGD 24 Jam",
-        "Rawat Inap",
-        "Rawat Jalan",
-        "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
-        "Medical Check-Up",
-        "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
-        "Rehabilitasi Medik",
-        "Layanan Bedah (termasuk bedah mata dan onkologi)",
-        "Farmasi 24 Jam",
-        "Klinik Jantungan"],
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"],
     rating: 4.3,
     doctors: ["Dr. Dian Putri", "Dr. Edward Surya"] // <- Tambahan
   },
@@ -67,17 +68,17 @@ const sampleHospitals: Hospital[] = [
     latitude: -7.315427,
     longitude: 112.735689,
     services: ["UGD 24 Jam",
-        "Rawat Inap",
-        "Rawat Jalan (Reguler BPJS dan Eksekutif Non-BPJS)",
-        "Poliklinik Spesialis (Kardiologi, Neurologi, Urologi, Anak, Penyakit Dalam, Mata, Ortopedi)",
-        "Hemodialisis (30 mesin, single-use dialiser)",
-        "Diagnostik Lanjutan (CT Scan, USG, Rontgen, Laboratorium)",
-        "Layanan Bedah (4 kamar operasi, termasuk ortopedi dengan C-arm dan mata dengan phakoemulsifikasi)",
-        "Klinik Fertilitas",
-        "Rehabilitasi Medik (Terapi Okupasi, Terapi Wicara, Tumbuh Kembang Anak)",
-        "Poli Laktasi (konsultasi ASI)",
-        "Pemulasaran Jenazah",
-        "Farmasi 24 Jam"],
+      "Rawat Inap",
+      "Rawat Jalan (Reguler BPJS dan Eksekutif Non-BPJS)",
+      "Poliklinik Spesialis (Kardiologi, Neurologi, Urologi, Anak, Penyakit Dalam, Mata, Ortopedi)",
+      "Hemodialisis (30 mesin, single-use dialiser)",
+      "Diagnostik Lanjutan (CT Scan, USG, Rontgen, Laboratorium)",
+      "Layanan Bedah (4 kamar operasi, termasuk ortopedi dengan C-arm dan mata dengan phakoemulsifikasi)",
+      "Klinik Fertilitas",
+      "Rehabilitasi Medik (Terapi Okupasi, Terapi Wicara, Tumbuh Kembang Anak)",
+      "Poli Laktasi (konsultasi ASI)",
+      "Pemulasaran Jenazah",
+      "Farmasi 24 Jam"],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"] // <- Tambahan
   },
@@ -88,14 +89,14 @@ const sampleHospitals: Hospital[] = [
     latitude: -7.235678,
     longitude: 112.785432,
     services: ["UGD 24 Jam",
-        "Rawat Inap",
-        "Rawat Jalan",
-        "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata, Ortopedi)",
-        "Diagnostik (Rontgen, USG, Laboratorium)",
-        "Layanan Bedah Umum",
-        "Rehabilitasi Medik",
-        "Layanan Kedokteran Hiperbarik",
-        ],
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata, Ortopedi)",
+      "Diagnostik (Rontgen, USG, Laboratorium)",
+      "Layanan Bedah Umum",
+      "Rehabilitasi Medik",
+      "Layanan Kedokteran Hiperbarik",
+    ],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"]
   },
@@ -106,12 +107,12 @@ const sampleHospitals: Hospital[] = [
     latitude: -7.316543,
     longitude: 112.674128,
     services: ["UGD 24 Jam",
-        "Rawat Inap",
-        "Rawat Jalan",
-        "Poliklinik Spesialis (Anak, Penyakit Dalam, Bedah, THT, Mata)",
-        "Diagnostik (Rontgen, USG, Laboratorium)",
-        "Layanan Bedah Umum"
-        ],
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (Anak, Penyakit Dalam, Bedah, THT, Mata)",
+      "Diagnostik (Rontgen, USG, Laboratorium)",
+      "Layanan Bedah Umum"
+    ],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"]
   },
@@ -122,12 +123,12 @@ const sampleHospitals: Hospital[] = [
     latitude: -7.256789,
     longitude: 112.678234,
     services: ["UGD 24 Jam",
-        "Rawat Inap",
-        "Rawat Jalan",
-        "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata)",
-        "Diagnostik (USG, Rontgen, Laboratorium)",
-        "Layanan Bedah Umum"
-        ],
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (Penyakit Dalam, Anak, Bedah, THT, Mata)",
+      "Diagnostik (USG, Rontgen, Laboratorium)",
+      "Layanan Bedah Umum"
+    ],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"]
   },
@@ -145,7 +146,7 @@ const sampleHospitals: Hospital[] = [
       "Radiologi",
       "Bedah Laparoskopi",
       "Radiologi"
-        ],
+    ],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"]
   },
@@ -164,7 +165,7 @@ const sampleHospitals: Hospital[] = [
       "Hemodialisis",
       "MCU",
       "Fisioterapi"
-        ],
+    ],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"]
   },
@@ -173,14 +174,14 @@ const sampleHospitals: Hospital[] = [
     name: "Rumah Sakit Surabaya Medical Service",
     address: "Jl. Kapuas No.2, Keputran, Kec. Tegalsari, Surabaya",
     latitude: -7.261354,
-    longitude: 112.737942 ,
+    longitude: 112.737942,
     services: ["Rawat Inap",
       "Rawat Jalan",
       "UGD 24 Jam",
       "Poliklinik Spesialis",
       "Laboratorium",
       "Radiologi"
-        ],
+    ],
     rating: 4.7,
     doctors: ["Dr. Fajar Prasetyo", "Dr. Gina Natalia"]
   }
@@ -259,6 +260,7 @@ export default function MapComponent({
             position={[hospital.latitude, hospital.longitude]}
             icon={hospitalIcon}
           >
+
             <Popup>
               <div className="p-1">
                 <h3 className="font-semibold text-lg mb-1">{hospital.name}</h3>
@@ -288,11 +290,15 @@ export default function MapComponent({
                   </ul>
                 </div>
 
-                <button className="w-full text-center bg-primary text-white text-sm py-1 px-3 rounded-md hover:bg-primary-dark transition-colors">
+                <Link
+                  href={`/hospitals/${hospital.id}`}
+                  className="w-full block text-center bg-primary !text-white text-sm py-1 px-3 rounded-md hover:bg-primary-dark transition-colors"
+                >
                   Lihat Detail
-                </button>
+                </Link>
               </div>
             </Popup>
+// ...existing code...
 
           </Marker>
         ))}

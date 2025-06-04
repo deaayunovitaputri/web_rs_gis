@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function AdminLoginPage() {
+export default function RegisterPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -16,18 +17,16 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
 
-    // In a real app, you would validate credentials with a backend
-    // For demo purposes, we'll use a simple check
-    if (email === "admin@example.com" && password === "password123") {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Redirect to admin dashboard
-      router.push("/admin/dashboard");
-    } else {
-      setError("Email atau password salah. Silakan coba lagi.");
+    if (password !== confirmPassword) {
+      setError("Password dan konfirmasi password tidak sama.");
       setLoading(false);
+      return;
     }
+
+    // Simulasi pendaftaran berhasil
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Setelah register, redirect ke login
+    router.push("/");
   };
 
   return (
@@ -39,7 +38,7 @@ export default function AdminLoginPage() {
           </h2>
         </Link>
         <h2 className="mt-6 text-center text-2xl font-semibold text-gray-900">
-          Login Admin
+          Register Akun
         </h2>
       </div>
 
@@ -50,7 +49,7 @@ export default function AdminLoginPage() {
               {error}
             </div>
           )}
-          
+
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -66,7 +65,7 @@ export default function AdminLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="input-field py-2"
-                  placeholder="admin@example.com"
+                  placeholder="Email"
                 />
               </div>
             </div>
@@ -80,33 +79,31 @@ export default function AdminLoginPage() {
                   id="password"
                   name="password"
                   type="password"
-                  autoComplete="current-password"
+                  autoComplete="new-password"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="input-field py-2"
-                  placeholder="password123"
+                  placeholder="Password"
                 />
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+                Konfirmasi Password
+              </label>
+              <div className="mt-1">
                 <input
-                  id="remember_me"
-                  name="remember_me"
-                  type="checkbox"
-                  className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="input-field py-2"
+                  placeholder="Konfirmasi Password"
                 />
-                <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
-                  Ingat saya
-                </label>
-              </div>
-
-              <div className="text-sm">
-                <a href="#" className="font-medium text-primary hover:text-primary-dark">
-                  Lupa password?
-                </a>
               </div>
             </div>
 
@@ -116,28 +113,18 @@ export default function AdminLoginPage() {
                 disabled={loading}
                 className={`w-full btn-primary ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                {loading ? 'Memproses...' : 'Login'}
+                {loading ? 'Memproses...' : 'Register'}
               </button>
             </div>
           </form>
 
-          <div className="mt-6">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">
-                  Atau kembali ke
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <Link href="/" className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                Halaman Utama
+          <div className="mt-6 text-center">
+            <span className="text-sm text-gray-600">
+              Sudah punya akun?{" "}
+              <Link href="/login" className="text-primary hover:underline">
+                Login di sini
               </Link>
-            </div>
+            </span>
           </div>
         </div>
       </div>

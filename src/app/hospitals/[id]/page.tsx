@@ -45,79 +45,682 @@ interface Review {
 }
 
 // Sample data for a hospital
-const sampleHospital: Hospital = {
-  id: 1,
-  name: "RSUD Dr. Soetomo",
-  address: "Jl. Mayjen Prof. Dr. Moestopo No.6-8, Airlangga, Kec. Gubeng, Kota Surabaya",
-  phone: "(031) 5501078",
-  operatingHours: "24 Jam",
-  services: [
-    "UGD 24 Jam", 
-    "Poli Umum", 
-    "Poli Anak", 
-    "Poli Gigi", 
-    "Rawat Inap", 
-    "ICU", 
-    "Radiologi", 
-    "Laboratorium"
-  ],
-  facilities: [
-    "Parkir Luas",
-    "Kantin",
-    "ATM Center",
-    "Apotek",
-    "Mushola",
-    "Wifi",
-    "Ambulance"
-  ],
-  doctors: [
-    {
-      id: 1,
-      name: "dr. Agus Suryanto, Sp.PD",
-      specialty: "Spesialis Penyakit Dalam",
-      image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
-    },
-    {
-      id: 2,
-      name: "dr. Budi Santoso, Sp.A",
-      specialty: "Spesialis Anak",
-      image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
-    },
-    {
-      id: 3,
-      name: "dr. Citra Dewi, Sp.OG",
-      specialty: "Spesialis Obstetri & Ginekologi",
-      image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
-    }
-  ],
-  rating: 4.5,
-  reviews: [
-    {
-      id: 1,
-      user: "Ahmad",
-      rating: 5,
-      comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
-      date: "12 Mei 2023"
-    },
-    {
-      id: 2,
-      user: "Budi",
-      rating: 4,
-      comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
-      date: "23 April 2023"
-    },
-    {
-      id: 3,
-      user: "Citra",
-      rating: 4,
-      comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
-      date: "5 Maret 2023"
-    }
-  ],
-  image: "https://placehold.co/800x400/3B82F6/FFFFFF/png?text=RSUD+Dr.+Soetomo",
-  latitude: -7.2647,
-  longitude: 112.7583
-};
+const hospitals: Hospital[] = [
+  {
+    id: 1,
+    name: "RSUD Dr. Soetomo",
+    address: "Jl. Mayjen Prof. Dr. Moestopo No.6-8, Airlangga, Kec. Gubeng, Kota Surabaya",
+    phone: "(031) 5501078",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Poli Umum",
+      "Poli Anak",
+      "Poli Gigi",
+      "Rawat Inap",
+      "ICU",
+      "Radiologi",
+      "Laboratorium"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/soeto.png",
+    latitude: -7.267468,
+    longitude: 112.757648
+  },
+  {
+    id: 2,
+    name: "Rumah Sakit Universitas Airlangga",
+    address: "Jl. Mayjen Prof. Dr. Moestopo No. 47, Surabaya",
+    phone: "+62 31 5501488",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/una.jpg",
+    latitude: -7.267892,
+    longitude: 112.758124
+  },
+  {
+    id: 3,
+    name: "Rumah Sakit Islam Surabaya",
+    address: "Jl. Achmad Yani No. 2-4, Wonokromo, Surabaya",
+    phone: "+62 31 8291920",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/rsi.png",
+    latitude: -7.315427,
+    longitude: 112.735689
+  },
+  {
+    id: 4,
+    name: "Rumah Sakit Angkatan Laut Dr. Ramelan (RSAL)",
+    address: "Jl. Gadung No. 1, Surabaya",
+    phone: "+62 31 5501488",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/rsal.png",
+    latitude: -7.235678,
+    longitude: 112.785432
+  },
+  {
+    id: 5,
+    name: "Rumah Sakit Wiyung Sejahtera",
+    address: "Jl. Raya Menganti Wiyung No. 27, Surabaya",
+    phone: "+62 31 7532777",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/rsadi.png",
+    latitude: -7.316543,
+    longitude: 112.674128
+  },
+  {
+    id: 6,
+    name: "Rumah Sakit Muji Rahayu",
+    address: "Jl. Raya Manukan Kulon No. 66, Surabaya",
+    phone: "+62 31 7417171",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/muji.png",
+    latitude: -7.256789,
+    longitude: 112.678234
+  },
+  {
+    id: 7,
+    name: "RSUD Husada Prima",
+    address: "Jl. Karang Tembok No. 39, Surabaya",
+    phone: "031-3713839",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/husada.jpg",
+    latitude: -7.234567,
+    longitude: 112.759812
+  },
+  {
+    id: 8,
+    name: "RS PKU Muhammadiyah Surabaya",
+    address: "Jl. Raya Sutorejo No. 64, Dukuh Sutorejo, Kec. Mulyorejo, Surabaya",
+    phone: "031-5939933",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/pku.png",
+    latitude: -7.230456,
+    longitude: 112.780123
+  },
+  {
+    id: 9,
+    name: "Rumah Sakit Surabaya Medical Service",
+    address: "Jl. Kapuas No.2, Keputran, Kec. Tegalsari, Surabaya",
+    phone: "031-5686161",
+    operatingHours: "24 Jam",
+    services: [
+      "UGD 24 Jam",
+      "Rawat Inap",
+      "Rawat Jalan",
+      "Poliklinik Spesialis (21 spesialisasi termasuk Mata, Onkologi, Kardiologi, Ortopedi, Neurologi)",
+      "Medical Check-Up",
+      "Diagnostik Lanjutan (CT Scan, MRI, USG 4D, Laboratorium)",
+      "Rehabilitasi Medik",
+      "Layanan Bedah (termasuk bedah mata dan onkologi)",
+      "Farmasi 24 Jam",
+      "Klinik Jantungan"
+    ],
+    facilities: [
+      "Parkir Luas",
+      "Kantin",
+      "ATM Center",
+      "Apotek",
+      "Mushola",
+      "Wifi",
+      "Ambulance"
+    ],
+    doctors: [
+      {
+        id: 1,
+        name: "dr. Agus Suryanto, Sp.PD",
+        specialty: "Spesialis Penyakit Dalam",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Agus"
+      },
+      {
+        id: 2,
+        name: "dr. Budi Santoso, Sp.A",
+        specialty: "Spesialis Anak",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Budi"
+      },
+      {
+        id: 3,
+        name: "dr. Citra Dewi, Sp.OG",
+        specialty: "Spesialis Obstetri & Ginekologi",
+        image: "https://placehold.co/300x300/3B82F6/FFFFFF/png?text=dr.+Citra"
+      }
+    ],
+    rating: 4.5,
+    reviews: [
+      {
+        id: 1,
+        user: "Ahmad",
+        rating: 5,
+        comment: "Pelayanan sangat baik dan cepat. Dokter dan perawat sangat profesional.",
+        date: "12 Mei 2023"
+      },
+      {
+        id: 2,
+        user: "Budi",
+        rating: 4,
+        comment: "Fasilitas lengkap dan bersih. Antrian cukup teratur.",
+        date: "23 April 2023"
+      },
+      {
+        id: 3,
+        user: "Citra",
+        rating: 4,
+        comment: "Dokter sangat informatif dan menjelaskan dengan detail. Hanya saja waktu tunggu cukup lama.",
+        date: "5 Maret 2023"
+      }
+    ],
+    image: "/image/mdical.jpg",
+    latitude: -7.261354,
+    longitude: 112.737942
+  }
+
+];
 
 export default function HospitalDetailPage() {
   const params = useParams();
@@ -125,16 +728,16 @@ export default function HospitalDetailPage() {
   const [activeTab, setActiveTab] = useState("info");
 
   useEffect(() => {
-    // In a real app, fetch hospital data based on the ID
-    // For now, we'll use sample data
-    setHospital(sampleHospital);
+    // Cari RS sesuai id dari URL
+    const found = hospitals.find((rs) => rs.id === Number(params.id));
+    setHospital(found || null);
   }, [params.id]);
 
   if (!hospital) {
     return (
       <MainLayout>
         <div className="container mx-auto px-4 py-8">
-          <p>Loading...</p>
+          <p>Rumah Sakit tidak ditemukan.</p>
         </div>
       </MainLayout>
     );
@@ -151,12 +754,17 @@ export default function HospitalDetailPage() {
             Kembali ke Daftar Rumah Sakit
           </Link>
         </div>
-        
+
         <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
-          <div className="relative h-64 md:h-80">
-            <img src={hospital.image} alt={hospital.name} className="w-full h-full object-cover" />
+          <div className="relative h-96 md:h-[500px]"> {/* Ubah h-64 md:h-80 menjadi h-96 md:h-[500px] */}
+            <img
+              src={hospital.image}
+              alt={hospital.name}
+              className="w-full h-full object-cover object-center rounded-b-none"
+              style={{ imageRendering: "auto" }} // Pastikan browser tidak melakukan smoothing berlebih
+            />
           </div>
-          
+
           <div className="p-6">
             <div className="flex flex-wrap items-start justify-between mb-4">
               <div>
@@ -169,7 +777,7 @@ export default function HospitalDetailPage() {
                   {hospital.address}
                 </p>
               </div>
-              
+
               <div className="flex items-center mt-2 md:mt-0">
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
@@ -181,34 +789,34 @@ export default function HospitalDetailPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex border-b border-gray-200 mb-6">
-              <button 
+              <button
                 className={`px-4 py-2 font-medium text-sm ${activeTab === 'info' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}
                 onClick={() => setActiveTab('info')}
               >
                 Informasi
               </button>
-              <button 
+              <button
                 className={`px-4 py-2 font-medium text-sm ${activeTab === 'services' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}
                 onClick={() => setActiveTab('services')}
               >
                 Layanan & Fasilitas
               </button>
-              <button 
+              <button
                 className={`px-4 py-2 font-medium text-sm ${activeTab === 'doctors' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}
                 onClick={() => setActiveTab('doctors')}
               >
                 Dokter
               </button>
-              <button 
+              <button
                 className={`px-4 py-2 font-medium text-sm ${activeTab === 'reviews' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}
                 onClick={() => setActiveTab('reviews')}
               >
                 Ulasan
               </button>
             </div>
-            
+
             {activeTab === 'info' && (
               <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -233,12 +841,12 @@ export default function HospitalDetailPage() {
                       <a href="#" className="text-primary">Kunjungi Website</a>
                     </p>
                   </div>
-                  
+
                   <div>
                     <h2 className="text-xl font-semibold mb-4">Lokasi</h2>
                     <div className="h-48 rounded-lg overflow-hidden">
-                      <MapComponentWithNoSSR 
-                        height="100%" 
+                      <MapComponentWithNoSSR
+                        height="100%"
                         hospitals={[{
                           id: hospital.id,
                           name: hospital.name,
@@ -254,7 +862,7 @@ export default function HospitalDetailPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mt-6">
                   <h2 className="text-xl font-semibold mb-4">Tentang {hospital.name}</h2>
                   <p className="text-text-secondary mb-4">
@@ -266,7 +874,7 @@ export default function HospitalDetailPage() {
                 </div>
               </div>
             )}
-            
+
             {activeTab === 'services' && (
               <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -283,7 +891,7 @@ export default function HospitalDetailPage() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h2 className="text-xl font-semibold mb-4">Fasilitas</h2>
                     <ul className="space-y-2">
@@ -300,7 +908,7 @@ export default function HospitalDetailPage() {
                 </div>
               </div>
             )}
-            
+
             {activeTab === 'doctors' && (
               <div>
                 <h2 className="text-xl font-semibold mb-6">Dokter</h2>
@@ -317,14 +925,14 @@ export default function HospitalDetailPage() {
                 </div>
               </div>
             )}
-            
+
             {activeTab === 'reviews' && (
               <div>
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-xl font-semibold">Ulasan ({hospital.reviews.length})</h2>
                   <button className="btn-primary text-sm">Tulis Ulasan</button>
                 </div>
-                
+
                 <div className="space-y-6">
                   {hospital.reviews.map((review) => (
                     <div key={review.id} className="border-b border-gray-100 pb-6 last:border-0">

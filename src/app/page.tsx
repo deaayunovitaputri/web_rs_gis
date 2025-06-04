@@ -4,11 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import MainLayout from "../components/layout/MainLayout";
 import dynamic from "next/dynamic";
+import { useEffect } from "react"; // Tambahkan ini
+import { useRouter } from "next/navigation"; // Tambahkan ini
+
 const MapComponent = dynamic(() => import("@/components/map/MapComponent"), { ssr: false });
 
 
 
 export default function Home() {
+  
   return (
     <MainLayout>
       {/* Hero Section */}
